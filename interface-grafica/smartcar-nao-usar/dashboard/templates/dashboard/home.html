@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Smart Car - Controls{% endblock %}
+
+{% block content %}
+
+<form name="formularioIp" action="#" method="POST">{% csrf_token %}
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="ipNumber">IP</label>
+        <input class="form-control" id="ipNumber" name="ipNumber" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" type="submit" onclick="validar()">Submit form</button>
+</form>
+<button class="btn btn-primary" onclick="acao()">Teste</button>
+{{ ip }}
+<iframe id="frame-camera" width="640" height="480"></iframe>
+
+
+{% endblock %}
